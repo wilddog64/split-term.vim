@@ -54,7 +54,7 @@ fun! s:openTerm(args, count, vertical)
   let direction = s:force_vertical ? 1 : a:vertical
 
   call s:openBuffer(a:count, direction)
-  exe 'terminal' a:args
+  exe 'term://zsh' a:args
   exe 'startinsert'
   if s:map_keys
     call s:defineMaps()
